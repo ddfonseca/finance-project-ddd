@@ -1,12 +1,5 @@
 import { EmailValueObject } from './email-value-object';
 describe('email-value-object.ts', () => {
-  it('should return an invalid email', () => {
-    const email = EmailValueObject.create('invalid_mail');
-
-    expect(email.isFailure).toBe(true);
-    expect(email.error).toBe('Invalid Email');
-  });
-
   it('should return a valid email', () => {
     const email = EmailValueObject.create('valid_mail@domain.com');
 
